@@ -1,0 +1,19 @@
+<div id="verificacion" class="modal">
+   <div class="modal-content">
+     <h4>Ingresa tu clave para empezar la edicion tu perfil</h4>
+     <h5>{{error}}</h5>
+     <form #formVerificar="ngForm" (ngSubmit)="verificarViajero(formVerificar.value)">
+       <div class="input-field">
+         <input  id="password" type="password" name="password" class="validate" ngModel>
+         <label for="nombre">clave</label>
+       </div>
+
+       <button type="submit" class="btn" >Iniciar</button>
+       </form>
+
+
+   </div>
+
+ </div>
+
+ <modal-edicion ></modal-edicion>

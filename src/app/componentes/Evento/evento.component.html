@@ -1,0 +1,29 @@
+<div class="row center">
+  <h4>Crear Evento</h4>
+  <div class="col l6 s12 push-l3">
+   <p class="error">{{error}}</p>
+    <form #formEvento="ngForm" (ngSubmit)="crearEvento(formEvento.value)">
+      <div class="input-field">
+        <input  id="nombre" type="text" name="nombre" class="validate" ngModel>
+        <label for="nombre">Nombre</label>
+      </div>
+      <div class="input-field">
+        <input  id="fecha" type="date" name="fecha" class="fecha" ngModel>
+      </div>
+      <div class="input-field ">
+        <input  id="lugar" type="text" name="lugar" class="validate" ngModel>
+        <label for="lugar">Lugar</label>
+      </div>
+      <div class="input-field " >
+         <textarea id="descripcion" class="materialize-textarea" name="descripcion" ngModel></textarea>
+         <label for="descripcion">Descripcion</label>
+       </div>
+     <div class="input-field ">
+        <input  id="participantes" type="text" name="participantes" class="validate" ngModel>
+        <label for="participantes">No.Participantes</label>
+      </div>
+      <button type="submit" class="btn" >Crear</button>
+    </form>
+    <br><br><br>
+  </div>
+</div>

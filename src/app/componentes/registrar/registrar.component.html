@@ -1,0 +1,36 @@
+<div class="row center">
+  <h4>Registrate en Voyage</h4>
+  <div class="col l6 s12 push-l3">
+   <p class="error">{{error}}</p>
+    <form #formRegistrar="ngForm" (ngSubmit)="registrarViajero(formRegistrar.value)">
+      <div class="input-field">
+        <input  id="nombre" type="text" name="nombre" class="validate" ngModel>
+        <label for="nombre">Nombres y Apellidos</label>
+      </div>
+      <div class="input-field ">
+        <input  id="documento" type="text" name="documento" class="validate" ngModel>
+        <label for="documento">Documento</label>
+      </div>
+      <div class="input-field ">
+        <input  id="edad" type="text" name="edad" class="validate" ngModel>
+        <label for="edad">Edad</label>
+      </div>
+      <div class="input-field ">
+        <input  id="sexo" type="text" name="sexo" class="validate" ngModel>
+        <label for="sexo">Sexo</label>
+      </div>
+    <div class="input-field ">
+      <input  id="email" type="email" name="email" class="validate" ngModel>
+      <label for="email">Email</label>
+    </div>
+    <div class="input-field ">
+      <input  id="pass" type="password" name="password" class="validate" ngModel>
+      <label for="pass">Contraseña</label>
+    </div>
+
+      <button type="submit" class="btn" >Registrarme</button>
+    </form>
+
+
+  </div>
+</div>

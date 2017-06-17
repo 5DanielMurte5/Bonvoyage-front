@@ -1,0 +1,48 @@
+<nav>
+  <div  id = "barra" class="nav-wrapper green darken-3">
+
+    <a id="titulo" href="#" class="brand-logo center ">{{title}}</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li ><a routerLink="">Inicio </a></li>
+      <li *ngIf="logued" routerLinkActive="active"><a routerLink="/perfil">Perfil</a></li>
+      <li *ngIf="!logued" routerLinkActive="active"><a routerLink="/ingresar">Ingresar </a></li>
+      <li *ngIf="!logued" routerLinkActive="active"><a routerLink="/registrarse">Registrate</a></li>
+      <li *ngIf="logued" routerLinkActive="active"><a routerLink="/crear/evento">Crear evento</a></li>
+      <li *ngIf="logued" routerLinkActive="active"><a routerLink="miseventos">Mis eventos</a></li>
+      <li routerLinkActive="active"><a routerLink="/usuarios">Viajeros</a></li>
+      <li *ngIf="logued" (click)="logout()"><a >Salir</a></li>
+    </ul>
+    </div>
+</nav>
+<div class="slider">
+  <ul class="slides">
+    <li>
+      <img src="https://www.facua.org/es/images/noticia9515h.jpg"> <!-- random image -->
+      <div class="caption center-align">
+        <h3></h3>
+        <h5 class="light grey-text text-lighten-3"></h5>
+      </div>
+    </li>
+    <li>
+      <img src="https://www.viajesyfotos.net/images/cabecera/1.jpg"> <!-- random image -->
+      <div class="caption left-align">
+        <h3></h3>
+        <h5 class="light grey-text text-lighten-3"></h5>
+      </div>
+    </li>
+    <li>
+      <img src="https://islasyviajes.com/images/Viajes-a-islas-de-todo-el-mundo.jpg"> <!-- random image -->
+      <div class="caption right-align">
+        <h3></h3>
+        <h5 class="light grey-text text-lighten-3"></h5>
+      </div>
+    </li>
+    <li>
+      <img src="http://www.viajespolinesia.es/wp-content/uploads/viaje-de-novios-a-polinesia-viajes-a-polinesia-001.jpg"> <!-- random image -->
+      <div class="caption center-align">
+        <h3></h3>
+        <h5 class="light grey-text text-lighten-3"></h5>
+      </div>
+    </li>
+  </ul>
+</div>

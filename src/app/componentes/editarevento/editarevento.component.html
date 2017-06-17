@@ -1,0 +1,30 @@
+<div class="row center">
+  <h4>Editar evento {{evento.nombre}}</h4>
+  <div class="col l6 s12 push-l3">
+   <p class="error">{{error}}</p>
+    <form #formEvento="ngForm" (ngSubmit)="editarEvento(formEvento.value)">
+      <div class="input-field">
+        <input  id="nombre" placeholder="Nombre" type="text"  [ngModel]="evento.nombre" name="nombre" class="validate">
+
+      </div>
+      <div class="input-field">
+        <input  id="fecha"placeholder="Fecha" type="date" [ngModel]="evento.fecha"name="fecha" class="fecha" >
+
+      </div>
+      <div class="input-field ">
+        <input  id="lugar" placeholder="Lugar"type="text" [ngModel]="evento.lugar" name="lugar" class="validate" >
+
+      </div>
+      <div class="input-field " >
+         <textarea id="descripcion"placeholder="Descripcion" class="materialize-textarea" [ngModel]="evento.descripcion" name="descripcion" > {{evento.descripcion}} </textarea>
+
+       </div>
+     <div class="input-field ">
+        <input  id="participantes" placeholder="No.Participantes"type="text" [ngModel]="evento.participantes" name="participantes" class="validate" >
+
+      </div>
+      <button type="submit" class="btn" >Editar</button>
+    </form>
+    <br><br><br>
+  </div>
+</div>

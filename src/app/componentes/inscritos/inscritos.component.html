@@ -1,0 +1,32 @@
+<div id="inscritos" class="modal">
+   <div class="modal-content">
+     <h4>Inscritos a {{evento.nombre}}</h4>
+
+
+
+      <table>
+        <thead>
+          <tr>
+              <th>Nombre</th>
+              <th>Email</th>
+              <th>Sexo</th>
+              <th>Edad</th>
+
+
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor="let inscrito of inscritos">
+            <td > <a  class="modal-action modal-close" [routerLink]="['../usuarios/viajero', inscrito.id_viajero]">{{inscrito.nombre}}</a></td>
+            <td>{{inscrito.email}}</td>
+            <td>{{inscrito.sexo}}</td>
+            <td>{{inscrito.edad}}</td>
+          </tr>
+
+        </tbody>
+      </table>
+
+   </div>
+
+ </div>

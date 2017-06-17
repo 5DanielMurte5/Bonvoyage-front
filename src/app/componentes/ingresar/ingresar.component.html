@@ -1,0 +1,22 @@
+
+<div class="row center">
+  <h4>Ingresar</h4>
+  <div class="col l6 s12 push-l3">
+   <p class="error">{{error}}</p>
+    <form #formIngresar="ngForm" (ngSubmit)="ingresarViajero(formIngresar.value)">
+      <div class="input-field">
+      <input  id="email" type="email" name="email" class="validate" ngModel>
+      <label for="email">Email</label>
+    </div>
+
+     <div class="input-field ">
+      <input  id="pass" type="password" name="password" class="validate" ngModel>
+      <label for="pass">Contraseña</label>
+    </div>
+
+      <button type="submit" class="btn" href="#">Ingresar</button>
+    </form>
+
+
+  </div>
+</div>

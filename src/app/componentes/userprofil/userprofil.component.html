@@ -1,0 +1,52 @@
+<h1>Bienvenido al Perfil de {{viajero.nombre}}!</h1>
+<h2> Sus viajes : </h2>
+<div class="row">
+  <div *ngFor="let viaje of viajes" class="col s4">
+    <div class="card blue-grey darken-1">
+      <div class="card-content white-text">
+        <span class="card-title">{{viaje.origen}}-{{viaje.destinacion}}</span>
+             <p>{{viaje.aerolinea}}</p>
+      </div>
+      <div class="card-action">
+        <a href="#">{{viaje.fecha_salida}}</a>
+        <a href="#"></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2>Sus eventos : </h2>
+<div class="row">
+  <div *ngFor="let evento of eventos" class="col s4">
+    <div class="card  green lighten-4">
+      <div class="card-content black-text">
+        <span class="card-title">{{evento.nombre}}</span>
+             <p>{{evento.descripcion}}</p>
+      </div>
+      <div class="card-action  ">
+     <a (click)="inscribirEvento(evento.id_evento)">Inscribirme</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2>Eventos en comun : </h2>
+<div class="row">
+  <div *ngFor="let evento of eventos">
+    <div *ngFor="let userevento of usereventos" >
+        <div *ngIf="userevento.id_evento===evento.id_evento" class="col s4">
+    <div class="card  green lighten-4">
+      <div class="card-content black-text">
+        <span class="card-title">{{evento.nombre}}</span>
+             <p>{{evento.descripcion}}</p>
+      </div>
+      <div class="card-action  ">
+        <a href="#">Fecha :{{evento.fecha}}</a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<li *ngIf="logued" routerLinkActive="active"><a routerLink="/crear/evento">Crear evento</a></li>

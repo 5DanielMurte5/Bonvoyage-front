@@ -1,0 +1,34 @@
+<h1>Bienvenido {{user.nombre}}!</h1>
+  <a (click)="abrirModal()" class="waves-effect waves-yellow btn-large">Editar Perfil</a>
+   <modal-verificar ></modal-verificar>
+<h2>Tus viajes : </h2>
+<div class="row">
+  <div *ngFor="let viaje of viajes" class="col s4">
+    <div class="card blue-grey darken-1">
+      <div class="card-content white-text">
+        <span class="card-title">{{viaje.origen}}-{{viaje.destinacion}}</span>
+             <p>{{viaje.aerolinea}}</p>
+      </div>
+      <div class="card-action">
+        <a href="#">{{viaje.fecha_salida}}</a>
+        <a href="#"></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2>Tus eventos : </h2>
+<div class="row">
+  <div *ngFor="let evento of eventos" class="col s4">
+    <div class="card  green lighten-4">
+      <div class="card-content black-text">
+        <span class="card-title">{{evento.nombre}}</span>
+             <p>{{evento.descripcion}}</p>
+      </div>
+      <div class="card-action  ">
+        <a href="#">Fecha :{{evento.fecha}}</a>
+       <a (click)="eliminarEvento(evento.id_evento,user.id_viajero)" class="waves-effect waves-light btn">Desinscribirme</a>
+      </div>
+    </div>
+  </div>
+</div>

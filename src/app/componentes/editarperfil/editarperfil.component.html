@@ -1,0 +1,38 @@
+
+<div id="edicion" class="modal">
+   <div class="modal-content">
+<div class="row center">
+  <h4>Edita tu perfil  {{user.nombre}}</h4>
+  <div class="col l6 s12 push-l3">
+   <p class="error">{{error}}</p>
+    <form #formPerfil="ngForm" (ngSubmit)="editarPerfil(formPerfil.value)">
+      <div class="input-field">
+        <input  id="nombre" placeholder="Nombre" type="text"  [ngModel]="user.nombre" name="nombre" class="validate">
+
+      </div>
+      <div class="input-field">
+        <input  id="documento"placeholder="Documento" type="text" [ngModel]="user.documento"name="documento" class="fecha" >
+
+      </div>
+      <div class="input-field ">
+        <input  id="edad" placeholder="Edad"type="text" [ngModel]="user.edad" name="edad" class="validate" >
+
+      </div>
+      <div class="input-field ">
+        <input  id="sexo" placeholder="Sexo"type="text" [ngModel]="user.sexo" name="sexo" class="validate" >
+
+      </div>
+       <div class="input-field ">
+          <input  id="email" placeholder="Email"type="text" [ngModel]="user.email" name="email" class="validate" >
+
+        </div>
+     <div class="input-field ">
+        <input  id="password" placeholder="Password"type="password" [ngModel]="user.password" name="password" class="validate" >
+
+      </div>
+      <button type="submit" class="btn" >Editar</button>
+    </form>
+  </div>
+</div>
+</div>
+</div>
