@@ -36,7 +36,6 @@ export class UserProfilComponent implements OnInit{
   } else {
    this.user = localStorage.getItem('user')
    this.user = JSON.parse(this.user);
-   console.log(this.user)
 }
 
 this.route.params.subscribe(params => {
@@ -44,7 +43,6 @@ this.route.params.subscribe(params => {
   .subscribe(
      result => {
     this.viajero = result[0]
-    console.log(this.viajero.id_viajero)
     this.getViajes(this.viajero.id_viajero)
     this.getEventos(this.viajero.id_viajero)
     this.getEventosU(this.user.id_viajero)
